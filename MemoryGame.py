@@ -3,9 +3,9 @@
 # create highlighting animation over the boxes
 # ability to open boxes individually (done!)
 # sliding animation for boxes closing and opening (done!)
-# after two boxes are open, both close, if they are different, if they are same, they stay open
+# after two boxes are open, both close, if they are different, if they are same, they stay open (done!)
 # boxes stay open for 10 seconds at the start of the game, so player can memorize (done!)
-# win condition
+# win condition (done! maybe, haven't checked, should work in theory)
 
 
 import pygame 
@@ -85,7 +85,7 @@ GAME_START = False
 def main():
 	global DISPLAYSURF, BOARD_REVEAL, GAME_START
 	DISPLAYSURF = pygame.display.set_mode((WINDOWX, WINDOWY))
-
+	pygame.display.set_caption('Memory Card')
 	
 	firstX, firstY = None, None
 
