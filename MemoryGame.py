@@ -138,7 +138,6 @@ def main():
 						else: # the two boxes are not the exact same....as in the box no. is not the exact same though the color and shape might still be the same
 							
 							if secondCell[0] == firstCell[0] and secondCell[1] == firstCell[1]: # if shape and color are same
-								print("same shapes")
 								secondCell[4] = True
 								uncoverBoxesAnimation(secondCell, board)
 								firstCell[5] = "matched"
@@ -147,7 +146,6 @@ def main():
 								continue
 							
 							elif secondCell[0] != firstCell[0] or secondCell[1] != firstCell[1]:
-								print("different shapes")
 								secondCell[4] = True
 								uncoverBoxesAnimation(secondCell, board)
 								pygame.time.wait(1000)
@@ -243,7 +241,6 @@ def drawShape(shape, color, coordDict, surface): # function that shows a variety
 
 
 def coverBoxesAnimation(cell, board):
-	print("CLOSING", cell)
 	for cover in range(0, BOXSIZE + 1, COVERSPEED):
 		if not cell[4] and cell[5] == "unmatched":
 			coordDict = cell[3]
